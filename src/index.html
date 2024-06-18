@@ -5,9 +5,179 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./output.css" rel="stylesheet">
 </head>
-<body>
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+<body class="bg-slate-950 text-cyan-50">
+  <div class="">
+    <header class="absolute inset-x-0 top-0 z-50">
+      <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+        <div class="flex lg:flex-1">
+          <a href="https://rajneeshzyox.github.io/portfolio" class="-m-1.5 p-1.5">
+            <span class="sr-only">Rajneesh Kumar</span>
+            <img class="h-8 w-auto rounded-full" src="../assets/pic_raj.jpg" alt="Rajneesh">
+          </a>
+        </div>
+        <div class="flex lg:hidden">
+          <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-800">
+            <span class="sr-only">Open menu</span>
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-12">
+          <a href="#" class="text-sm font-semibold leading-6 text-gray-100">Home</a>
+          <a href="#" class="text-sm font-semibold leading-6 text-gray-100">Calculator</a>
+          <a href="#" class="text-sm font-semibold leading-6 text-gray-100">AI Calculator</a>
+          
+        </div>
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+          <a href="#" class="text-sm font-semibold leading-6 text-gray-100">Portfolio <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </nav>
+      <!-- Mobile menu, show/hide based on menu open state. -->
+      <div class="lg:hidden" role="dialog" aria-modal="true">
+        <!-- Background backdrop, show/hide based on slide-over state. -->
+        <div class="fixed inset-0 z-50"></div>
+        <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-slate-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <div class="flex items-center justify-between">
+            <a href="https://rajneeshzyox.github.io/portfolio" class="-m-1.5 p-1.5">
+              <span class="sr-only">rajneeshzyox</span>
+              <img class="h-8 w-auto" src="../assets/pic_raj.jpg" alt="rajneeshzyox">
+            </a>
+            <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-200">
+              <span class="sr-only">Close menu</span>
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <div class="mt-6 flow-root">
+            <div class="-my-6 divide-y divide-gray-200/10">
+              <div class="space-y-2 py-6">
+                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-gray-50  hover:text-slate-800">Home</a>
+                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-gray-50 hover:text-slate-800">Calculator</a>
+                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-gray-50 hover:text-slate-800">AI Calculator</a>
+               
+              </div>
+              <div class="py-6">
+                <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-100 hover:bg-gray-50 hover:text-slate-800">Portfolio</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  
+    <div class="relative isolate px-6 pt-14 lg:px-8">
+      <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
+        <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+      </div>
+      <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+        <div class="hidden sm:mb-8 sm:flex sm:justify-center">
+          <div class="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-300 ring-1 ring-gray-300  hover:ring-indigo-300">
+            See my other amazing projects <a href="https://rajneeshzyox.github.io/portfolio" class="font-semibold text-indigo-400"><span class="absolute inset-0" aria-hidden="true"></span>Visit Portfolio <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </div>
+        <div class="text-center">
+          <h1 class="text-4xl font-bold tracking-tight text-gray-100 sm:text-6xl">AI calculator mini project</h1>
+          <p class="mt-6 text-lg leading-8 text-gray-300">ai calculator discription</p>
+          <div class="mt-10 flex items-center justify-center gap-x-6">
+            <a href="#" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get started</a>
+            <a href="#" class="text-sm font-semibold leading-6 text-gray-100">Learn more <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
+        <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+      </div>
+    </div>
+  </div>
+  
+
+
+  <!-- footer Section -->
+
+  <footer class=" bg-gray-900">
+    <div class="relative mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8 lg:pt-24">
+      <div class="absolute end-4 top-4 sm:end-6 sm:top-6 lg:end-8 lg:top-8">
+        <a
+          class="inline-block rounded-full bg-indigo-600 p-2 text-white shadow transition hover:bg-indigo-500 sm:p-3 lg:p-4 dark:bg-gray-700 dark:text-indigo-300 dark:hover:bg-gray-600"
+          href="#MainContent"
+        >
+          <span class="sr-only">Back to top</span>
+  
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </a>
+      </div>
+  
+      <div class="lg:flex lg:items-end lg:justify-between">
+        <div>
+          <div class="flex justify-center text-indigo-600 lg:justify-start dark:text-indigo-300">
+            <svg width="74px" height="74px" viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#6016d0"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path stroke="#7070fe" stroke-linecap="round" stroke-width="12" d="M51.152 26v58.303M22 55.151h58.303m31.394 0H170m-58.303 102.031H170m-58.303-24.667H170m-139.462-8.28 41.227 41.227m-41.227 0 41.227-41.227"></path></g></svg>
+          </div>
+  
+          <p
+            class="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-200 lg:text-left"
+          >
+            AI Calculator
+          </p>
+        </div>
+  
+        <ul
+          class="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:mt-0 lg:justify-end lg:gap-12"
+        >
+          <li>
+            <a
+              class=" transition text-white hover:text-white/75"
+              href="#"
+            >
+              About
+            </a>
+          </li>
+  
+          <li>
+            <a
+              class="transition  text-white hover:text-white/75"
+              href="#"
+            >
+              Services
+            </a>
+          </li>
+  
+          <li>
+            <a
+              class=" transition text-white hover:text-white/75"
+              href="#"
+            >
+              Pr 
+            </a>
+          </li>
+  
+          <li>
+            <a
+              class=" transition text-white hover:text-white/75"
+              href="#"
+            >
+              Blog
+            </a>
+          </li>
+        </ul>
+      </div>
+  
+      <p class="mt-12 text-center text-sm  lg:text-right text-gray-400">
+        Copyright &copy; 2022. All rights reserved.
+      </p>
+    </div>
+  </footer>
 </body>
 </html>
