@@ -725,6 +725,10 @@ video {
   isolation: auto;
 }
 
+.z-10 {
+  z-index: 10;
+}
+
 .z-50 {
   z-index: 50;
 }
@@ -733,20 +737,12 @@ video {
   z-index: -1;
 }
 
-.z-20 {
-  z-index: 20;
-}
-
-.z-10 {
-  z-index: 10;
+.col-span-2 {
+  grid-column: span 2 / span 2;
 }
 
 .col-span-full {
   grid-column: 1 / -1;
-}
-
-.col-span-2 {
-  grid-column: span 2 / span 2;
 }
 
 .float-start {
