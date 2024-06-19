@@ -34,7 +34,7 @@
         </div>
       </nav>
       <!-- Mobile menu, show/hide based on menu open state. -->
-      <div class="lg:hidden" role="dialog" aria-modal="true">
+      <div class="hidden" role="dialog" aria-modal="true">
         <!-- Background backdrop, show/hide based on slide-over state. -->
         <div class="fixed inset-0 z-50"></div>
         <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-slate-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
@@ -69,35 +69,80 @@
     </header>
   
     <div class="relative isolate px-6 pt-14 lg:px-8">
-      <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
-        <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
-      </div>
-      <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+      <span class="absolute left-[30vw] top-[20vh] w-[15rem] aspect-square bg-gradient-to-tr from-[#3b58d6fa] to-[#850dd4] opacity-50 blur-3xl" aria-label="hidden"></span>
+      <span class="absolute left-[10vw] top-[30vh] w-[20rem] aspect-square bg-gradient-to-tr from-[#3b58d6fa] to-[#850dd4] opacity-30 blur-3xl" aria-label="hidden"></span>
+    </div>
+      <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56 z-10">
         <div class="hidden sm:mb-8 sm:flex sm:justify-center">
-          <div class="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-300 ring-1 ring-gray-300  hover:ring-indigo-300">
-            See my other amazing projects <a href="https://rajneeshzyox.github.io/portfolio" class="font-semibold text-indigo-400"><span class="absolute inset-0" aria-hidden="true"></span>Visit Portfolio <span aria-hidden="true">&rarr;</span></a>
+          <div class="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-300">
+            See my other amazing projects <a href="https://rajneeshzyox.github.io/portfolio" class="font-semibold text-indigo-400 ">Visit Portfolio <span aria-hidden="true">&rarr;</span></a>
           </div>
         </div>
         <div class="text-center">
-          <h1 class="text-4xl font-bold tracking-tight text-gray-100 sm:text-6xl">AI calculator mini project</h1>
+          <h1 class="text-4xl font-bold tracking-tight text-gray-100 sm:text-6xl" id="typeMain">Mini Project By Rajneesh <br></h1>
           <p class="mt-6 text-lg leading-8 text-gray-300">ai calculator discription</p>
           <div class="mt-10 flex items-center justify-center gap-x-6">
             <a href="#" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get started</a>
-            <a href="#" class="text-sm font-semibold leading-6 text-gray-100">Learn more <span aria-hidden="true">→</span></a>
+          
           </div>
         </div>
       </div>
-      <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
-        <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+     
+        <div class=" relative isolate px-6 pt-14 lg:px-8" aria-hidden="true">
+          <span class="z-[-1] absolute right-0 w-[15rem] aspect-square bg-gradient-to-trfrom-[#3b58d6fa] to-[#850dd4]opacity-10 top-[calc(100%-13rem)] blur-3xl" aria-label="hidden"></span>
+          <span class=" z-[-1] absolute right-[20vw] top-[calc(100%-13rem)] w-[10rem] aspect-square bg-gradient-to-tr from-[#3b58d6fa] to-[#850dd4] opacity-20 blur-3xl" aria-label="hidden"></span>
+        </div>
       </div>
     </div>
   </div>
+  <!-- HERO SECTION ENDS -->
   
 
 
-  <!-- footer Section -->
+  <!-- ------------------------
+  Calculator Section
+  ------------------------ -->
+  <section class="flex justify-center align-middle min-h-[40vh]">
+    <form name="form" > 
+      <div class="grid grid-cols-4 grid-rows-6">
+      <input type="text" placeholder="calculator " name="ans" class="text-gray-900 col-span-full w-full"/>
+      <input type="button" value="Clear" onclick="form.ans.value = ''" class="col-span-2">
+      <input type="button" value="del" onclick="form.ans.value = ''">
+      <input type="button" value="/" onclick="form.ans.value += this.value">
+      
+      <input type="button" value="9" onclick="form.ans.value += this.value">
+      <input type="button" value="8" onclick="form.ans.value += this.value">
+      <input type="button" value="7" onclick="form.ans.value += this.value">
+      <input type="button" value="*" onclick="form.ans.value += this.value">
 
-  <footer class=" bg-gray-900">
+      <input type="button" value="6" onclick="form.ans.value += this.value">
+      <input type="button" value="5" onclick="form.ans.value += this.value">
+      <input type="button" value="4" onclick="form.ans.value += this.value">
+      <input type="button" value="-" onclick="form.ans.value += this.value">
+      
+      <input type="button" value="3" onclick="form.ans.value += this.value">
+      <input type="button" value="2" onclick="form.ans.value += this.value">
+      <input type="button" value="1" onclick="form.ans.value += this.value">
+      <input type="button" value="+" onclick="form.ans.value += this.value">
+
+      <input type="button" value="." onclick="form.ans.value += this.value">
+      <input type="button" value="0" onclick="form.ans.value += this.value">
+      <input type="button" value="=" onclick="form.ans.value = eval(form.ans.value)" class="col-span-2">
+      
+     </div>
+
+    </form>
+  </section>
+  <!--  Calculator Section -->
+
+
+
+
+  <!-- ------------------------
+          footer Section 
+   ------------------------ -->
+
+  <footer class=" bg-gray-950">
     <div class="relative mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8 lg:pt-24">
       <div class="absolute end-4 top-4 sm:end-6 sm:top-6 lg:end-8 lg:top-8">
         <a
@@ -180,5 +225,8 @@
       </p>
     </div>
   </footer>
+
+  <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+  <script src="./src/main.js"></script>
 </body>
 </html>
