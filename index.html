@@ -1,11 +1,11 @@
 <!doctype html>
-<html>
+<html class="*:scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./src/output.css" rel="stylesheet">
 </head>
-<body class="bg-slate-950 text-cyan-50">
+<body class="bg-slate-950 text-cyan-50 " style="scroll-behavior: smooth;">
   <div class="">
     <header class="absolute inset-x-0 top-0 z-50">
       <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
@@ -16,7 +16,7 @@
           </a>
         </div>
         <div class="flex lg:hidden">
-          <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-800">
+          <button id="navBtn" type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-200">
             <span class="sr-only">Open menu</span>
             <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -34,7 +34,7 @@
         </div>
       </nav>
       <!-- Mobile menu, show/hide based on menu open state. -->
-      <div class="hidden" role="dialog" aria-modal="true">
+      <div id="navItems" class="lg:hidden opacity-0 pointer-events-none transition-all duration-500" role="dialog" aria-modal="true">
         <!-- Background backdrop, show/hide based on slide-over state. -->
         <div class="fixed inset-0 z-50"></div>
         <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-slate-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
@@ -44,7 +44,7 @@
              
               <svg class="h-8 w-auto" viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#6016d0"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path stroke="#7070fe" stroke-linecap="round" stroke-width="12" d="M51.152 26v58.303M22 55.151h58.303m31.394 0H170m-58.303 102.031H170m-58.303-24.667H170m-139.462-8.28 41.227 41.227m-41.227 0 41.227-41.227"></path></g></svg>
             </a>
-            <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-200">
+            <button id="closeNavBtn" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-200">
               <span class="sr-only">Close menu</span>
               <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -54,21 +54,25 @@
           <div class="mt-6 flow-root">
             <div class="-my-6 divide-y divide-gray-200/10">
               <div class="space-y-2 py-6">
-                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-gray-50  hover:text-slate-800">Home</a>
-                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-gray-50 hover:text-slate-800">Calculator</a>
-                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-gray-50 hover:text-slate-800">AI Calculator</a>
+                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-gray-50  hover:text-slate-800 transition duration-200">Home</a>
+                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-gray-50 hover:text-slate-800 transition duration-200">Calculator</a>
+                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-gray-50 hover:text-slate-800 transition duration-200">AI Calculator</a>
                
               </div>
               <div class="py-6">
-                <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-100 hover:bg-gray-50 hover:text-slate-800">Portfolio</a>
+                <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-100 hover:bg-gray-50 hover:text-slate-800 transition duration-200">Portfolio</a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </header>
+
+  <!-- ------------------------
+  Hero Section
+  ------------------------ -->
   
-    <div class="relative isolate px-6 pt-14 lg:px-8">
+    <div id="hero" class="relative isolate px-6 pt-14 lg:px-8">
       <span class="absolute left-[30vw] top-[20vh] w-[15rem] aspect-square bg-gradient-to-tr from-[#3b58d6fa] to-[#850dd4] opacity-50 blur-3xl" aria-label="hidden"></span>
       <span class="absolute left-[10vw] top-[30vh] w-[20rem] aspect-square bg-gradient-to-tr from-[#3b58d6fa] to-[#850dd4] opacity-30 blur-3xl" aria-label="hidden"></span>
     </div>
@@ -104,8 +108,8 @@
   ------------------------ -->
   <section class="flex justify-center align-middle min-h-[40vh]">
     <form name="form" > 
-      <div class="grid grid-cols-4 grid-rows-6">
-      <input type="text" placeholder="calculator " name="ans" class="text-gray-900 col-span-full w-full"/>
+      <div class="grid grid-cols-4" style="grid-template-rows: minmax(3rem, auto) repeat(5, 50px);">
+      <input type="text" placeholder="calculator " name="ans" class="text-gray-900 col-span-full w-full break-all break-words" disabled/>
       <input type="button" value="Clear" onclick="form.ans.value = ''" class="col-span-2">
       <input type="button" value="del" onclick="form.ans.value = ''">
       <input type="button" value="/" onclick="form.ans.value += this.value">
@@ -146,8 +150,8 @@
     <div class="relative mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8 lg:pt-24">
       <div class="absolute end-4 top-4 sm:end-6 sm:top-6 lg:end-8 lg:top-8">
         <a
-          class="inline-block rounded-full bg-indigo-600 p-2 text-white shadow transition hover:bg-indigo-500 sm:p-3 lg:p-4 dark:bg-gray-700 dark:text-indigo-300 dark:hover:bg-gray-600"
-          href="#MainContent"
+          class="inline-block rounded-full bg-indigo-600 p-2 text-white shadow transition hover:bg-indigo-500 sm:p-3 lg:p-4 dark:bg-gray-700 dark:text-indigo-300 dark:hover:bg-gray-600" 
+          href="#hero"
         >
           <span class="sr-only">Back to top</span>
   
@@ -221,7 +225,7 @@
       </div>
   
       <p class="mt-12 text-center text-sm  lg:text-right text-gray-400">
-        Copyright &copy; 2022. All rights reserved.
+        Copyright &copy; 2024. All rights reserved.
       </p>
     </div>
   </footer>

@@ -46,3 +46,25 @@ new TypeIt("#typeMain", {
 	.pause(139)
 	.type("r")
 	.go();
+
+
+	// nav mobile 
+
+	let navBtn = document.getElementById('navBtn');
+	let closeNavBtn = document.getElementById('closeNavBtn');
+	let navItems = document.getElementById('navItems');
+
+	navBtn.addEventListener("click", (e) =>{
+		navItems.style.opacity = "1";
+		// navItems.style.scale = "1";
+		navItems.style.pointerEvents = "all";
+
+		// alert("btn clicked");
+	});
+	closeNavBtn.addEventListener("click", (e) =>{
+		navItems.style.opacity = "0";
+		// navItems.style.scale = "0";
+		navItems.style.pointerEvents = "none";
+
+		// alert("btn clicked");
+	});
