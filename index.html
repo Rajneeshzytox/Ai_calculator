@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="*:scroll-smooth">
+<html class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -106,41 +106,123 @@
   <!-- ------------------------
   Calculator Section
   ------------------------ -->
-  <section class="flex justify-center align-middle min-h-[40vh]">
+  <section class="flex justify-center align-middle min-h-[40vh] text-gray-900 relative lg:pt-[10vh] lg:pb-[10vh] pt-12 pb-12">
+    <div class="pointer-events-none z-[-1] relative isolate px-6 pt-14 lg:px-8" aria-hidden="true">
+      <span class=" bg-gradient-to-tr from-[#850dd4] to-blue-500 w-[10rem] aspect-square rounded-full absolute blur-2xl" aria-label="hidden"></span>
+      <span class=" z-[-1] absolute right-[20vw] top-[calc(100%-13rem)] w-[10rem] aspect-square bg-gradient-to-tr from-[#3b58d6fa] to-[#850dd4] opacity-20 blur-3xl" aria-label="hidden"></span>
+    </div>
     <form name="form" > 
-      <div class="grid grid-cols-4" style="grid-template-rows: minmax(3rem, auto) repeat(5, 50px);">
-      <input type="text" placeholder="calculator " name="ans" class="text-gray-900 col-span-full w-full break-all break-words" disabled/>
-      <input type="button" value="Clear" onclick="form.ans.value = ''" class="col-span-2">
-      <input type="button" value="del" onclick="form.ans.value = ''">
-      <input type="button" value="/" onclick="form.ans.value += this.value">
-      
-      <input type="button" value="9" onclick="form.ans.value += this.value">
-      <input type="button" value="8" onclick="form.ans.value += this.value">
-      <input type="button" value="7" onclick="form.ans.value += this.value">
-      <input type="button" value="*" onclick="form.ans.value += this.value">
+      <div class="grid grid-cols-4 bg-slate-50 bg-opacity-40 z-10 rounded-md" style="grid-template-rows: minmax(3rem, auto) repeat(5, 50px);">
+      <input type="text" placeholder="calculator " name="ans" class="pl-2 text-slate-900 bg-slate-200 rounded-sm col-span-full w-full break-all break-words" disabled/>
 
-      <input type="button" value="6" onclick="form.ans.value += this.value">
-      <input type="button" value="5" onclick="form.ans.value += this.value">
-      <input type="button" value="4" onclick="form.ans.value += this.value">
-      <input type="button" value="-" onclick="form.ans.value += this.value">
-      
-      <input type="button" value="3" onclick="form.ans.value += this.value">
-      <input type="button" value="2" onclick="form.ans.value += this.value">
-      <input type="button" value="1" onclick="form.ans.value += this.value">
-      <input type="button" value="+" onclick="form.ans.value += this.value">
 
-      <input type="button" value="." onclick="form.ans.value += this.value">
-      <input type="button" value="0" onclick="form.ans.value += this.value">
-      <input type="button" value="=" onclick="form.ans.value = eval(form.ans.value)" class="col-span-2">
+      <input type="button" value="Clear" onclick="form.ans.value = ''" class="col-span-2 px-3.5 py-2.5 text-sm font-semibold text-black shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-slate-100 bg-[#ffffffa0]">
+      <input type="button" value="del" onclick="form.ans.value = ''" class="hover:bg-slate-100 bg-[#ffffffa0] hover:text-slate-900 transition-all duration-200">
+      <input type="button" value="/" onclick="form.ans.value += this.value" class="hover:bg-slate-100 bg-[#ffffffa0] hover:text-slate-900 transition-all duration-200">
+      
+      <input type="button" value="9" onclick="form.ans.value += this.value" class="hover:bg-slate-100 bg-[#ffffffa0] hover:text-slate-900 transition-all duration-200">
+      <input type="button" value="8" onclick="form.ans.value += this.value" class="hover:bg-slate-100 bg-[#ffffffa0] hover:text-slate-900 transition-all duration-200">
+      <input type="button" value="7" onclick="form.ans.value += this.value" class="hover:bg-slate-100 bg-[#ffffffa0] hover:text-slate-900 transition-all duration-200">
+      <input type="button" value="*" onclick="form.ans.value += this.value" class="hover:bg-slate-100 bg-[#ffffffa0] hover:text-slate-900 transition-all duration-200">
+
+      <input type="button" value="6" onclick="form.ans.value += this.value" class="hover:bg-slate-100 bg-[#ffffffa0] hover:text-slate-900 transition-all duration-200">
+      <input type="button" value="5" onclick="form.ans.value += this.value" class="hover:bg-slate-100 bg-[#ffffffa0] hover:text-slate-900 transition-all duration-200">
+      <input type="button" value="4" onclick="form.ans.value += this.value" class="hover:bg-slate-100 bg-[#ffffffa0] hover:text-slate-900 transition-all duration-200">
+      <input type="button" value="-" onclick="form.ans.value += this.value" class="hover:bg-slate-100 bg-[#ffffffa0] hover:text-slate-900 transition-all duration-200">
+      
+      <input type="button" value="3" onclick="form.ans.value += this.value" class="hover:bg-slate-100 bg-[#ffffffa0] hover:text-slate-900 transition-all duration-200">
+      <input type="button" value="2" onclick="form.ans.value += this.value" class="hover:bg-slate-100 bg-[#ffffffa0] hover:text-slate-900 transition-all duration-200">
+      <input type="button" value="1" onclick="form.ans.value += this.value" class="hover:bg-slate-100 bg-[#ffffffa0] hover:text-slate-900 transition-all duration-200">
+      <input type="button" value="+" onclick="form.ans.value += this.value" class="hover:bg-slate-100 bg-[#ffffffa0] hover:text-slate-900 transition-all duration-200">
+
+      <input type="button" value="." onclick="form.ans.value += this.value" class="hover:bg-slate-100 bg-[#ffffffa0] hover:text-slate-900 transition-all duration-200">
+      <input type="button" value="0" onclick="form.ans.value += this.value" class="hover:bg-slate-100 bg-[#ffffffa0] hover:text-slate-900 transition-all duration-200">
+      <input type="button" value="=" onclick="form.ans.value = eval(form.ans.value)" class="col-span-2 rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
       
      </div>
 
     </form>
   </section>
-  <!--  Calculator Section -->
+  <!--  Calculator Section Ends-->
+  
+  
+  
+  <!-- ------------------------
+  Ai Calculator
+  ------------------------ -->
+  <section class="min-h-[40vh] ">
+    <main class="ai-cal-input">
+      <input type="file" id="input-file" />
+      <input type="textarea" id="user-input" />
+      <button id="run">Run</button>
+    </main>
+
+    <main class="ai-cal-output">
+        <div id="output">Ai solution here</div>
+    </main>
+  </section>
+
+  <!-- js for ai calculator  -->
+  <!-- get your own api key {free} from ai studio google -->
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
 
+    <script type="importmap">
+      {
+        "imports": {
+          "@google/generative-ai": "https://esm.run/@google/generative-ai"
+        }
+      }
+    </script>
+    <script type="module">
+      import { GoogleGenerativeAI } from "@google/generative-ai";
 
+      // Fetch your API_KEY
+      const API_KEY = "AIzaSyCDVoBf3FFxUFXjbseRrSWbytAr73fKF_c";
+      // Reminder: This should only be for local testing
+
+        const genAI = new GoogleGenerativeAI(API_KEY);
+
+        // Converts a File object to a GoogleGenerativeAI.Part object.
+        async function fileToGenerativePart(file) {
+        const base64EncodedDataPromise = new Promise((resolve) => {
+            const reader = new FileReader();
+            reader.onloadend = () => resolve(reader.result.split(',')[1]);
+            reader.readAsDataURL(file);
+        });
+        return {
+            inlineData: { data: await base64EncodedDataPromise, mimeType: file.type },
+        };
+        }
+
+        async function run() {
+        // The Gemini 1.5 models are versatile and work with both text-only and multimodal prompts
+        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+
+        const prompt = document.querySelector('#user-input').value;
+        const outputDiv = document.querySelector('#output');
+        const fileInputEl = document.querySelector("#input-file");
+
+
+        const imageParts = await Promise.all(
+            [...fileInputEl.files].map(fileToGenerativePart)
+        );
+
+        const result = await model.generateContent([prompt, ...imageParts]);
+        const response = await result.response;
+        const text = response.text();
+        // adding on div || showing on screen
+        outputDiv.innerHTML = marked.parse(text);
+        }
+
+        const Btn = document.querySelector('#run');
+        Btn.addEventListener("click", run);
+
+    
+    </script>
+
+  <!--  Calculator Section Ends-->
 
   <!-- ------------------------
           footer Section 
