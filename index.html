@@ -1,0 +1,301 @@
+<!doctype html>
+<html class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./src/output.css" rel="stylesheet">
+
+  <!-- font icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-slate-950 text-cyan-50 " style="scroll-behavior: smooth;">
+  <div class="">
+    <header class="absolute inset-x-0 top-0 z-50">
+      <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+        <div class="flex lg:flex-1">
+          <a href="https://rajneeshzyox.github.io/portfolio" class="-m-1.5 p-1.5">
+            <span class="sr-only">Rajneesh Kumar</span>
+            <svg class="h-8 w-auto" viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#6016d0"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path stroke="#7070fe" stroke-linecap="round" stroke-width="12" d="M51.152 26v58.303M22 55.151h58.303m31.394 0H170m-58.303 102.031H170m-58.303-24.667H170m-139.462-8.28 41.227 41.227m-41.227 0 41.227-41.227"></path></g></svg>
+          </a>
+        </div>
+        <div class="flex lg:hidden relative">
+          <span class="block bg-slate-500 w-full h-full absolute animate-ping rounded-full pointer-events-none select-none"></span>
+          <button id="navBtn" type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-200">
+            <span class="sr-only">Open menu</span>
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-12">
+          <a href="#" class="text-sm font-semibold leading-6 text-gray-100">Home</a>
+          <a href="#" class="text-sm font-semibold leading-6 text-gray-100">Calculator</a>
+          <a href="#" class="text-sm font-semibold leading-6 text-gray-100">AI Calculator</a>
+          
+        </div>
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+          <a href="#" class="text-sm font-semibold leading-6 text-gray-100">Portfolio <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </nav>
+      <!-- Mobile menu, show/hide based on menu open state. -->
+      <div id="navItems" class="lg:hidden opacity-0 pointer-events-none transition-all duration-500" role="dialog" aria-modal="true">
+        <!-- Background backdrop, show/hide based on slide-over state. -->
+        <div class="fixed inset-0 z-50"></div>
+        <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-slate-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <div class="flex items-center justify-between">
+            <a href="https://rajneeshzyox.github.io/portfolio" class="-m-1.5 p-1.5">
+              <span class="sr-only">rajneeshzyox</span>
+             
+              <svg class="h-8 w-auto" viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#6016d0"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path stroke="#7070fe" stroke-linecap="round" stroke-width="12" d="M51.152 26v58.303M22 55.151h58.303m31.394 0H170m-58.303 102.031H170m-58.303-24.667H170m-139.462-8.28 41.227 41.227m-41.227 0 41.227-41.227"></path></g></svg>
+            </a>
+            <button id="closeNavBtn" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-200">
+              <span class="sr-only">Close menu</span>
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <div class="mt-6 flow-root">
+            <div class="-my-6 divide-y divide-gray-200/10">
+              <div class="space-y-2 py-6">
+                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-gray-50  hover:text-slate-800 transition duration-200">Home</a>
+                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-gray-50 hover:text-slate-800 transition duration-200">Calculator</a>
+                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-gray-50 hover:text-slate-800 transition duration-200">AI Calculator</a>
+               
+              </div>
+              <div class="py-6">
+                <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-100 hover:bg-gray-50 hover:text-slate-800 transition duration-200">Portfolio</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+  <!-- ------------------------
+  Hero Section
+  ------------------------ -->
+  
+    <div id="hero" class="relative isolate px-6 pt-14 lg:px-8">
+      <span class="absolute left-[30vw] top-[20vh] w-[15rem] aspect-square bg-gradient-to-tr from-[#3b58d6fa] to-[#850dd4] opacity-50 blur-3xl" aria-label="hidden"></span>
+      <span class="absolute left-[10vw] top-[30vh] w-[20rem] aspect-square bg-gradient-to-tr from-[#3b58d6fa] to-[#850dd4] opacity-30 blur-3xl" aria-label="hidden"></span>
+    </div>
+      <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56 z-10">
+        <div class="hidden sm:mb-8 sm:flex sm:justify-center">
+          <div class="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-300">
+            See my other amazing projects <a href="https://rajneeshzyox.github.io/portfolio" class="font-semibold text-indigo-400 ">Visit Portfolio <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </div>
+        <div class="text-center z-10">
+          <h1 class="text-4xl font-bold tracking-tight text-gray-100 sm:text-6xl" id="typeMain">Mini Project By Rajneesh <br></h1>
+          <p class="mt-6 text-lg leading-8 text-gray-300">ai calculator discription</p>
+          <div class="mt-10 flex items-center justify-center gap-x-6">
+            <a href="#" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get started</a>
+          
+          </div>
+        </div>
+      </div>
+     
+        <div class="pointer-events-none absolute isolate px-6 pt-14 lg:px-8" aria-hidden="true">
+          <span class=" absolute right-0 w-[15rem] aspect-square bg-gradient-to-trfrom-[#3b58d6fa] to-[#850dd4]opacity-10 top-[calc(100%-13rem)] blur-3xl" aria-label="hidden"></span>
+          <span class=" absolute right-[20vw] top-[calc(100%-13rem)] w-[10rem] aspect-square bg-gradient-to-tr from-[#3b58d6fa] to-[#850dd4] opacity-20 blur-3xl" aria-label="hidden"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- HERO SECTION ENDS -->
+  
+
+
+  <!-- ------------------------
+  Calculator Section
+  ------------------------ -->
+  <section class="flex justify-center align-middle min-h-[40vh] text-gray-900 relative lg:pt-[10vh] lg:pb-[10vh] pt-12 pb-12">
+    <div class="pointer-events-none z-[-1] relative isolate px-6 pt-14 lg:px-8" aria-hidden="true">
+      <span class=" bg-gradient-to-tr from-[#850dd4] to-blue-500 w-[10rem] aspect-square rounded-full absolute" aria-label="hidden"></span>
+      <span class=" z-[-1] absolute right-[20vw] top-[calc(100%-13rem)] w-[10rem] aspect-square bg-gradient-to-tr from-[#3b58d6fa] to-[#850dd4] opacity-20 blur-3xl" aria-label="hidden"></span>
+    </div>
+    <h3 class="text-[10vw] font-semibold text-[rgba(200,200,200,0.3)] pointer-events-none absolute z-[-1] -translate-y-20">Basic Calculator</h3>
+
+    <!-- calculator -->
+    <form name="form" > 
+      <div class="grid grid-cols-4 bg-[#ffffffa0] z-10 rounded-md backdrop-blur-2xl" style="grid-template-rows: minmax(3rem, auto) repeat(5, 50px);">
+      <input type="text" placeholder="calculator " name="ans" class="pl-2 text-slate-900 bg-slate-200 rounded-sm col-span-full w-full break-all break-words" disabled/>
+
+        <!-- buttons with compact js calculator logic -->
+      <input type="button" value="Clear" onclick="form.ans.value = ''" class="col-span-2 px-3.5 py-2.5 text-sm font-semibold text-black shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-red-400 ">
+      <input type="button" value="del" onclick="form.ans.value = ''" class="hover:bg-slate-100 hover:text-slate-900 transition-all duration-200">
+      <input type="button" value="/" onclick="form.ans.value += this.value" class="hover:bg-slate-100 hover:text-slate-900 transition-all duration-200">
+      
+      <input type="button" value="9" onclick="form.ans.value += this.value" class="hover:bg-slate-100  hover:text-slate-900 transition-all duration-200">
+      <input type="button" value="8" onclick="form.ans.value += this.value" class="hover:bg-slate-100  hover:text-slate-900 transition-all duration-200">
+      <input type="button" value="7" onclick="form.ans.value += this.value" class="hover:bg-slate-100  hover:text-slate-900 transition-all duration-200">
+      <input type="button" value="*" onclick="form.ans.value += this.value" class="hover:bg-slate-100  hover:text-slate-900 transition-all duration-200">
+
+      <input type="button" value="6" onclick="form.ans.value += this.value" class="hover:bg-slate-100  hover:text-slate-900 transition-all duration-200">
+      <input type="button" value="5" onclick="form.ans.value += this.value" class="hover:bg-slate-100  hover:text-slate-900 transition-all duration-200">
+      <input type="button" value="4" onclick="form.ans.value += this.value" class="hover:bg-slate-100  hover:text-slate-900 transition-all duration-200">
+      <input type="button" value="-" onclick="form.ans.value += this.value" class="hover:bg-slate-100  hover:text-slate-900 transition-all duration-200">
+      
+      <input type="button" value="3" onclick="form.ans.value += this.value" class="hover:bg-slate-100  hover:text-slate-900 transition-all duration-200">
+      <input type="button" value="2" onclick="form.ans.value += this.value" class="hover:bg-slate-100  hover:text-slate-900 transition-all duration-200">
+      <input type="button" value="1" onclick="form.ans.value += this.value" class="hover:bg-slate-100  hover:text-slate-900 transition-all duration-200">
+      <input type="button" value="+" onclick="form.ans.value += this.value" class="hover:bg-slate-100  hover:text-slate-900 transition-all duration-200">
+
+      <input type="button" value="." onclick="form.ans.value += this.value" class="hover:bg-slate-100  hover:text-slate-900 transition-all duration-200">
+      <input type="button" value="0" onclick="form.ans.value += this.value" class="hover:bg-slate-100  hover:text-slate-900 transition-all duration-200">
+      <input type="button" value="=" onclick="form.ans.value = eval(form.ans.value)" class="col-span-2 rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+      
+     </div>
+
+    </form>
+  </section>
+  <!--  Calculator Section Ends-->
+  
+  
+  
+  <!-- ------------------------
+  Ai Calculator
+  ------------------------ -->
+  <section class="min-h-[40vh] flex flex-col items-center gap-8">
+    <main class="ai-cal-input  lg:w-[50%] md:w-[60%] w-[80%] flex justify-center items-center flex-col gap-4">
+      <div class="flex bg-slate-100 justify-center items-center py-3 px-8 w-full gap-4 rounded-lg">
+        <label for="input-file" class="size-7 rounded-full aspect-square text-black flex justify-center items-center">
+          <i class="fa-solid fa-upload"></i>
+        </label>
+        <input type="file" id="input-file" class="hidden"/>
+        <textarea id="user-input" maxlength="250" placeholder="Write your question in 250 char" class="w-full bg-transparent outline-none text-black break-all break-words text-wrap"></textarea>
+      </div>
+      <button id="run" class="col-span-2 rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Run</button>
+    </main>
+
+    <main class="ai-cal-output w-[90%] text-slate-300">
+        <div id="animate-pulse" class=" w-[60%] hidden pointer-events-none select-none animate-pulse" aria-hidden="true">
+          <span class="heading block bg-slate-700 h-6 w-1/4 rounded-[30px] my-2"></span>
+          <span class="para block bg-slate-700 h-4 w-full rounded-[30px] my-2"></span>
+          <span class="para block bg-slate-700 h-4 w-1/2 rounded-[30px] my-2"></span>
+          
+        </div>
+        <div id="output" class="hidden">
+          
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni, corrupti adipisci pariatur earum repudiandae officia quia soluta sit obcaecati explicabo, excepturi quis, possimus ducimus mollitia ea necessitatibus nobis? Exercitationem, nihil?<br>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni, corrupti adipisci pariatur earum repudiandae officia quia soluta sit obcaecati explicabo, excepturi quis, possimus ducimus mollitia ea necessitatibus nobis? Exercitationem, nihil?<br>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni, corrupti adipisci pariatur earum repudiandae officia quia soluta sit obcaecati explicabo, excepturi quis, possimus ducimus mollitia ea necessitatibus nobis? Exercitationem, nihil?<br>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni, corrupti adipisci pariatur earum repudiandae officia quia soluta sit obcaecati explicabo, excepturi quis, possimus ducimus mollitia ea necessitatibus nobis? Exercitationem, nihil?<br>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni, corrupti adipisci pariatur earum repudiandae officia quia soluta sit obcaecati explicabo, excepturi quis, possimus ducimus mollitia ea necessitatibus nobis? Exercitationem, nihil?<br>
+        
+        </div>
+    </main>
+  </section>
+
+  <!-- js for ai calculator  -->
+  <!-- get your own api key {free} from ai studio google -->
+
+  <script src="https://cdn.jsdelivr.net/npm/showdown@2.0.4/dist/showdown.min.js"></script>
+
+    
+    <script type="importmap">
+      {
+        "imports": {
+          "@google/generative-ai": "https://esm.run/@google/generative-ai"
+        }
+      }
+    </script>
+    <script src="api_key.js"></script>
+    <script type="module" src="app.js">
+    </script>
+
+  <!--  Calculator Section Ends-->
+
+  <!-- ------------------------
+          footer Section 
+   ------------------------ -->
+
+  <footer class=" bg-gray-950">
+    <div class="relative mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8 lg:pt-24">
+      <div class="absolute end-4 top-4 sm:end-6 sm:top-6 lg:end-8 lg:top-8 animate-bounce">
+        <a
+          class="inline-block rounded-full bg-indigo-600 p-2 text-white shadow transition hover:bg-indigo-500 sm:p-3 lg:p-4 dark:bg-gray-700 dark:text-indigo-300 dark:hover:bg-gray-600" 
+          href="#hero"
+        >
+          <span class="sr-only">Back to top</span>
+  
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </a>
+      </div>
+  
+      <div class="lg:flex lg:items-end lg:justify-between">
+        <div>
+          <div class="flex justify-center text-indigo-600 lg:justify-start dark:text-indigo-300">
+            <img class="h-8 w-auto" src="./assets/pic_raj.jpg" alt="rajneeshzyox">
+          </div>
+  
+          <p
+            class="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-200 lg:text-left"
+          >
+            @rajneeshzyox
+          </p>
+        </div>
+  
+        <ul
+          class="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:mt-0 lg:justify-end lg:gap-12"
+        >
+          <li>
+            <a
+              class=" transition text-white hover:text-white/75"
+              href="#"
+            >
+              About me
+            </a>
+          </li>
+  
+          <li>
+            <a
+              class="transition  text-white hover:text-white/75"
+              href="#"
+            >
+              Services
+            </a>
+          </li>
+  
+          <li>
+            <a
+              class=" transition text-white hover:text-white/75"
+              href="#"
+            >
+              Portfolio 
+            </a>
+          </li>
+  
+          <li>
+            <a
+              class=" transition text-white hover:text-white/75"
+              href="#"
+            >
+              Resume
+            </a>
+          </li>
+        </ul>
+      </div>
+  
+      <p class="mt-12 text-center text-sm  lg:text-right text-gray-400">
+        Copyright &copy; 2024. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+  <script src="./src/main.js"></script>
+</body>
+</html>
