@@ -4,8 +4,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 
 
 // Fetch your API_KEYs
-// Reminder: This should only be for local testing
-const API_KEY = window.__API_KEY__;
+
 
   const genAI = new GoogleGenerativeAI(API_KEY);
 
