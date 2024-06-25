@@ -1,13 +1,13 @@
 
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import API_KEY from "./testapi.js";
+import API_KEY2 from "./api_key.js";
 // import 'dotenv/config'
 
 
 
 // Fetch your API_KEYs
 // Reminder: This should only be for local testing
-
+API_KEY = API_KEY2;
 
   const genAI = new GoogleGenerativeAI(API_KEY);
 
