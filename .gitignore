@@ -1,4 +1,5 @@
 node_modules
 temp.html
-
+.env
 api_key.js
+testapi.js
