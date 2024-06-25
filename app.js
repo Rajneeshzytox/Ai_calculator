@@ -1,7 +1,5 @@
 
 import { GoogleGenerativeAI } from "@google/generative-ai";
-// import API_KEY2 from "./";
-// import 'dotenv/config'
 
 
 
