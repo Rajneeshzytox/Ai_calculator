@@ -5,7 +5,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 
 // Fetch your API_KEYs
 
-
+const API_KEY = `${process.env.API_KEY}`;
   const genAI = new GoogleGenerativeAI(API_KEY);
 
   // Converts a File object to a GoogleGenerativeAI.Part object.
