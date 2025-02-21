@@ -68,3 +68,42 @@ new TypeIt("#typeMain", {
 
 		// alert("btn clicked");
 	});
+
+// ---------------------- API INPUT ----------------------
+
+const apiInput = document.querySelector(".api-key-input")
+const showApiKeyBtn = document.querySelector(".locked-api")
+const hideApiKeyBtn = document.querySelector(".unlocked-api")
+const setApiBtn = document.querySelector(".set-api-key")
+const setApiBtnInfo = document.querySelector(".set-api-key-info")
+
+
+showApiKeyBtn.addEventListener('click', ()=>{
+	
+	apiInput.type = "text"
+	showApiKeyBtn.classList.add('hidden')
+	hideApiKeyBtn.classList.remove('hidden')
+})
+hideApiKeyBtn.addEventListener('click', ()=>{
+	
+	apiInput.type = "password"
+	hideApiKeyBtn.classList.add('hidden')
+	showApiKeyBtn.classList.remove('hidden')
+})
+
+
+setApiBtn.addEventListener('click', ()=> {
+	let value = apiInput.value
+	localStorage.setItem('GOOGLE_API_KEY', value)
+	
+})
+setApiBtn.addEventListener('mouseover', ()=> {
+	
+	setApiBtnInfo.classList.remove('hidden')
+})
+setApiBtn.addEventListener('mouseleave', ()=> {
+	setApiBtnInfo.classList.add('hidden')
+})
+
+
+
