@@ -2,12 +2,6 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 
-
-// Fetch your API_KEYs
-
-const API_KEY = `API-Key-here`;
-  const genAI = new GoogleGenerativeAI(API_KEY);
-
   // Converts a File object to a GoogleGenerativeAI.Part object.
   async function fileToGenerativePart(file) {
   const base64EncodedDataPromise = new Promise((resolve) => {
@@ -20,7 +14,15 @@ const API_KEY = `API-Key-here`;
   };
   }
 
-  async function run() {
+async function run() {
+  const API_KEY = localStorage.getItem('GOOGLE_API_KEY')
+  if(!API_KEY){
+
+    alert("set api key first")
+    return
+  }
+
+  const genAI = new GoogleGenerativeAI(API_KEY);
   // The Gemini 1.5 models are versatile and work with both text-only and multimodal prompts
   const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
@@ -42,8 +44,7 @@ const API_KEY = `API-Key-here`;
   5. use br tag to new line and exta spaces after each headings or sub headings,
   6. use hr tag to seperate headings
   7. use pre, code, strong, subscript, supscript, b, i, u etc tags whenever possible.
-
-   
+  8. No Preamtions or Conclusion, Only Explanation
   `;
     animate.style.display = "block";
   const imageParts = await Promise.all(
